@@ -1,0 +1,165 @@
+.search 
+{
+	border-radius: 5px;
+	border:2px solid gray;
+	transition-delay: .2s;
+	margin-bottom: 0px;
+}
+.search:hover 
+{
+	cursor: text;
+}
+.search-div-buttons
+{
+	margin-top:1em; 
+}
+.search-button
+{
+	color: gray;
+}
+.search-button:hover
+{
+	color: #90caf9;
+	cursor: pointer;
+}
+.clear-button
+{
+	color: gray;
+}
+.clear-button:hover
+{
+	color: #ef9a9a;
+	cursor: pointer;
+}
+.black-border
+{
+	border-color:black;
+	transition-delay: .2s;
+}
+.center-div
+{
+	max-width: 300px;
+	margin:0px auto;
+	float: none;
+}
+.small-image
+{
+	max-height: 30px;
+}
+.border-bottom
+{
+	border-bottom: 1px solid #bdbdbd;
+}
+.suggest
+{
+	margin:0px 10px 0px 10px;
+	padding:15px 0px 10px 0px;
+	transition-delay: .3s;
+}
+.suggest:hover
+{
+	cursor: pointer;
+	border-color:#0288d1;
+	transition:border .2s;
+	color:#0288d1;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+}
+.suggest-main
+{
+	border-radius: 0px 0px 5px 5px;
+	border:1px solid gray;
+	transition:border .2s;
+	margin-bottom: 0px;
+	border-top: none;
+	z-index: 4;
+	background-color: rgba(255, 255, 255,.5);
+	font-weight: bold;
+}
+.large-text
+{
+	font-size: 20px;
+}
+.progress
+{
+	background-color: #bbdefb;
+}
+.progress .indeterminate
+{
+	background-color: #1976d2;
+}
+.grid-image
+{
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.fixed
+{
+	position: fixed;
+}
+.pagination li.active a
+{
+	background-color: #0288d1;
+	border-radius: 3px;
+}
+.center-align-div
+{
+	margin:0px auto;
+}
+.image-card
+{
+	height: 301px;
+	width:201px;
+}
+.name-card
+{
+	height: 54px;
+}
+.modal .modal-content
+{
+	padding:15px;
+}
+.modal-image
+{
+	width: 100%;
+	max-height: 400px
+}
+.carousel.carousel-slider .carousel-fixed-item{
+    bottom: 50%;
+}
+#page-main-top,#page-main-bottom
+{
+	float: none;	
+}
+.top
+{
+	position: fixed;
+	right:2em;
+	bottom: 2em;
+}
+window.scroll
+{
+	scroll-behavior: smooth;
+}
+.sort:hover
+{
+	cursor: pointer;
+	color:#0288d1;
+}
+.sort
+{
+	color: black;
+	font-weight: bold;
+}
+.hoverable:hover
+{
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#page-info-css
+{
+	float: none;
+}

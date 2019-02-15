@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/materialize.min.css">
+	<script type="text/javascript" src="assets/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/materialize.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#sticky-nav").hide();
+			$("#tab-stick").removeClass("border-bottom");
+    		$('.tabs').tabs();
+    		// $('#test-div').html($('#tab-stick').html());
+    		$('.dropdown-trigger').dropdown();
+    		$(window).scroll(function(){
+    			// var el=$("<ul></ul>").html($("#tab-stick").html());
+    			// $(el).addClass('tabs');
+				if($(window).scrollTop()>360)
+				{
+					$("#tab-stick").addClass('fixed top');
+					// $("#over").before("<div class='col s12 m12 l12'><div class='section' id='temp'></div></div>");
+				}
+				else
+				{
+					$("#tab-stick").removeClass('fixed top');
+					// $("#temp").remove();
+				}
+				if($(window).scrollTop()>570)
+				{
+
+					$("#sticky-nav").show(200);
+					$("#intro-div").addClass("border-bottom");
+				}
+				else
+				{
+					$("#sticky-nav").hide(200);
+					$("#intro-div").removeClass("border-bottom");
+				}
+			});
+  		});
+	</script>	
+</head>
+<body>
+	<div class="row border-bottom" id="sticky-nav" style="z-index: 4;">
+		<div class="col fixed top l12 s12 m12" id="intro-div" style="max-height: 49px;">
+			<div class="row">
+				<div class="col l4 s12 m12 offset-l1 white intro" >
+					<div>
+						<img src="assets/img_avatar.png" class="icon left">
+						<div class="info left" >Anupam Kumar</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="row grey darken-4">
+		<div class="col l10 m12 s12 offset-l1">
+			<nav>
+			    <div class="nav-wrapper grey darken-4">
+			      <ul id="nav-mobile" class="left">
+			        <li class=""><a href="#about"><i class="fa fa-github fa-2x white-text" aria-hidden="true"></i></a></li>
+					<li><a href="#">Why GitHub?</a></li>
+					<li><a href="#">Enterprise</a></li>
+					<li><a href="#">Explore</a></li>
+					<li><a href="#">Marketplace</a></li>
+					<li><a href="#">Pricing</a></li>
+			      </ul>
+			      <ul class="right">
+			      	<li><a class="waves-effect waves-light btn grey darken-4" style="text-transform: capitalize;">Sign In</a></li>
+					<li><a class="waves-effect waves-light btn grey darken-4" style="border:1px solid white;text-transform: capitalize;">Sign Up</a></li>
+			      </ul>
+			    </div>
+			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col l10 m12 l10 offset-l1">
+			<div class="row gradi rounded-border" style="margin-left: 0px; margin-right: 0px;">
+				<div class="col l12 m12 s12">
+					<div>
+						<div class="row">
+						<div class="col s12 m12 l12">
+							<div class="section"></div>
+							<h5 class="center-align">Create your own GitHub profile</h5>
+						</div>
+						<div class="col l6 offset-l3 ">
+							<p class="center-align">
+								Sign up for your own profile on GitHub, the best place to host code, manage projects, and build software alongside 28 million developers.
+							</p>
+						</div>
+						<div class="col s12 m12 l12">
+							<p class="center-align">
+								<a class="waves-effect waves-light btn center-align green accent-4">Sign Up</a>
+							</p>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l3 m12 s12" style="">
+					<div class="row">
+						<div class="col l12 m6 s12">
+							<img src="assets/img_avatar.png" style="max-width: 100%;" class="z-depth-2 rounded-border">
+						</div>
+						<div class="col l12 m6 s12">
+							<h5>Anupam Kumar</h5>
+							<h6 class="grey-text darken-2">anupamvs</h6>
+							<div class="section"></div>
+							<a href="#" class="grey-text darken-4">Block or report user</a>
+							<div class="section"></div>
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharastra</p>
+							<p><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Sign in to view Email</p>
+						</div>
+					</div>
+				</div>
+				<div class="col l9 m12 s12">
+					<div class="row">
+						<div class="col s12 m12 l12 white">
+							<ul class="tabs" id="tab-stick">
+								<li class="tab col "><a href="#over">Overview</a></li>
+								<li class="tab col "><a href="#repo">Repositories</a></li>
+								<li class="tab col "><a href="#star">Stars</a></li>
+								<li class="tab col "><a href="#followers">Followers</a></li>
+								<li class="tab col "><a href="#following">Following</a></li>
+							</ul>
+							<div>
+								<div class="divider"></div>
+							</div>
+						</div>
+						<div class="col s12 m12 l12" id="over">
+							<div class="section"></div>
+							<h6>Popular repositories</h6>
+							<div class="row">
+								<div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>python-basic-examples</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>javascript-examples</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Javascript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>ruby-on-rails</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Ruby&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>django-start-guide</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>python-basic-examples</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>python-basic-examples</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>python-basic-examples</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m6 l6">
+									<div class="card-panel z-depth-1 card-height">
+								        <div>
+								        	<span class="head"><a>python-basic-examples</a></span>
+								        </div>
+								        <div class="sub-content">
+								        	<p>
+								        		This repo have the basic programs of python basic concepts.
+								        	</p>
+								        </div>
+								        <div class="" style="position: relative; bottom: 0; font-size: 13px;">
+								          <p>
+								          	<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          	Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          	<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          </p>
+								        </div>
+								    </div>
+							    </div>
+							    <div class="col s12 m12 l12">
+							    	<h6>
+							    		312 contributions in the last year
+							    	</h6>
+							    	<div>
+							    		<div class="divider"></div>
+							    	</div>
+							    </div>
+							    <div class="col s12 m12 l12">
+							    	<canvas id="myChart" width="100%" height="400"></canvas>
+							    </div>
+							</div>
+						</div>
+						<div class="col s12 m12 l12" id="repo">
+							<div class="row">
+								<div class="col s12 m12 s12">
+									<div class="row">
+										<div>
+											<div class="section"></div>
+										</div>
+										<div class="col l6 m6 offset-l1">
+											<input type="text" name="" placeholder="Find a repository..." class="search-box">
+										</div>
+										<div class="col l2 m3">
+											<a class='dropdown-trigger btn white grey-text darken-4 border' href='#' data-target='dropdown1'>Type :<b>All</b></a>
+											<ul id='dropdown1' class='dropdown-content'>
+												<li>All</li>
+												<li>Sources</li>
+												<li>Forks</li>
+											</ul>
+										</div>
+										<div class="col l3 m3">
+											<a class='dropdown-trigger btn white grey-text darken-4 border' href='#' data-target='dropdown2'>Sources :<b>All</b></a>
+											<ul id='dropdown2' class='dropdown-content'>
+												<li>All</li>
+												<li>Sources</li>
+												<li>Forks</li>
+											</ul>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">typescript-basic-examples</p>
+											<p class="repo-detail">Updated a day ago.</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">python-basic-examples</p>
+											<p class="repo-content">
+												This repo have the basic programs of python basic concepts
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated 15 days ago.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">web-development</p>
+											<p class="repo-content">
+												UI components(Web Components) that are supported in the <br>
+												browser regardless of which <br>
+												framework(Angular/Ionic/ReactJS/VueJS) you are using.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Typescript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated 26 days ago.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">joomla-cms</p>
+											<p class="repo-content">
+												Home of the Joomla! Content Management System.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;2,800
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		GNU General Public License v2.0
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated on 26 Dec 2018.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">sunbird-auth</p>
+											<p class="repo-content">
+												Repository for sunbird authentication service.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;6
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		MIT License
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated on 30 Nov 2018.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">example-code</p>
+											<p class="repo-content">
+												Example code for the book Fluent Python.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;6
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		MIT License
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated on 25 Oct 2018.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s12 m12 l12" id="star">
+							<div class="row">
+								<div class="col s12 m12 s12">
+									<div class="row">
+										<div class="col l12 m12 s12">
+											<div class="section"></div>
+											<h6>Repositories</h6>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">anupamvs/typescript-basic-examples</p>
+											<p class="repo-detail">Updated a day ago.</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">anupamvs/python-basic-examples</p>
+											<p class="repo-content">
+												This repo have the basic programs of python basic concepts
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp; 21
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;51
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated 15 days ago.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">anupamvs/web-development</p>
+											<p class="repo-content">
+												UI components(Web Components) that are supported in the <br>
+												browser regardless of which <br>
+												framework(Angular/Ionic/ReactJS/VueJS) you are using.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Typescript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated 26 days ago.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">anupamvs/joomla-cms</p>
+											<p class="repo-content">
+												Home of the Joomla! Content Management System.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;2,800
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		GNU General Public License v2.0
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated on 26 Dec 2018.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">anupamvs/sunbird-auth</p>
+											<p class="repo-content">
+												Repository for sunbird authentication service.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;6
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		MIT License
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated on 30 Nov 2018.
+											</p>
+										</div>
+										<div class="col s12 m12 l12">
+											<div>
+												<div class="section"></div>
+												<div class="divider"></div>
+											</div>
+										</div>
+										<div class="col s12 m12 l12">
+											<p class="repo-title">anupamvs/example-code</p>
+											<p class="repo-content">
+												Example code for the book Fluent Python.
+											</p>
+											<p class="repo-detail">
+												<i class="fa fa-circle blue-text" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Python&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;&nbsp;6
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-balance-scale" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		MIT License
+								          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												Updated on 25 Oct 2018.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s12 m12 l12" id="followers">
+							<div class="row">
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Dhananjay</h6>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Rajnish</h6>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Chetan</h6>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Dhananjay</h6>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Rajnish</h6>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Chetan</h6>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col s12 m12 l12" id="following">
+							<div class="row">
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Prashant Mali</h6>
+						            	<p class="repo-content">
+						            		Software Developer. @google Developer Expert for @angular.<br> @AngularBootCamp instructor. @vmware developer.
+						            	</p>
+						            	<p class="repo-detail">
+						            		<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Pune, Maharastra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp; @vmware
+						            	</p>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Lawkush Das</h6>
+						            	<p class="repo-content">
+						            		I work in startup
+						            	</p>
+						            	<p class="repo-detail">
+						            		<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Mumbai, Maharastra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;co-founder at ubio.
+						            	</p>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Chetan</h6>
+						            	<p class="repo-content">
+						            		Het there, I am chetan
+						            	</p>
+						            	<p class="repo-detail">
+						            		<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		New York City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;cScott Logic.
+						            	</p>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Prashant Mali</h6>
+						            	<p class="repo-content">
+						            		Software Developer. @google Developer Expert for @angular.<br> @AngularBootCamp instructor. @vmware developer.
+						            	</p>
+						            	<p class="repo-detail">
+						            		<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Pune, Maharastra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp; @vmware
+						            	</p>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Lawkush Das</h6>
+						            	<p class="repo-content">
+						            		I work in startup
+						            	</p>
+						            	<p class="repo-detail">
+						            		<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		Mumbai, Maharastra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;co-founder at ubio.
+						            	</p>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+									</div>
+									<div class="col l2 m3 s4">
+						            	<img src="assets/avatar.png" alt="" class="responsive-img"> 
+						            </div>
+						            <div class="col l8 s2 m6">
+						            	<h6>Chetan</h6>
+						            	<p class="repo-content">
+						            		Het there, I am chetan
+						            	</p>
+						            	<p class="repo-detail">
+						            		<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;
+								          		New York City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								          		<i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;cScott Logic.
+						            	</p>
+									</div>
+									<div class="col l2 s2 m3" style="margin-top: 1em;">
+										<a class="waves-effect waves-light btn">Follow</a>
+									</div>
+								</div>
+								<div class="col s12 m12 l12">
+									<div>
+										<div class="section"></div>
+										<div class="divider"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

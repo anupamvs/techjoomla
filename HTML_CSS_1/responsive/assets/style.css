@@ -1,0 +1,94 @@
+.background
+{
+	background: gray;
+	
+}
+.change li a
+{
+	color:#0099ff;
+}
+.change li a:hover
+{
+	box-shadow: 0px -5px 0px #0099ff;
+	color: gray;
+}
+.intro-name
+{
+	font-size: 60px;
+	font-weight: bold;
+	margin: 27px 0 0 0;
+	text-align: center;
+}
+.intro-sub
+{
+	margin: 0;
+	font-size: 20px;
+	text-align: center;
+}
+.avatar
+{
+	border:solid 10px white;
+	border-radius: 50%;
+	height:100px;
+	width:100px;
+	filter: drop-shadow(0 0 5px gray);
+}
+.avatar-div
+{
+	float: left; 
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+.social
+{
+	margin: 5px;
+}
+.facebook
+{
+	color:#3b5998;
+}
+.twitter
+{
+	color:#1DA1F2;
+}
+.linkedin-c
+{
+	color:#0077B5;
+}
+.google-plus-c
+{
+	color:#d34836;
+}
+.rss-c
+{
+	color:#ee802f;
+}
+.progress
+{
+	height:20px;
+	background: #ffe6e6;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+.progress-fill
+{
+	height:20px;
+	background: #3366ff;
+	border-radius: 10px;
+}
+.label
+{
+	padding:7px;
+	color: white;
+	background: #0077B5;
+	font-size: 17px;
+	font-weight: bold;
+	border-radius: 1px;
+	width: 117px;
+}
+.label-div
+{
+	float: left;
+	margin-top: 15px;
+}

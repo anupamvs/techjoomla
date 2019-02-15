@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="assets/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/materialize.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<script type="text/javascript" src="assets/user.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('select').formSelect();
+			$("#progress").hide();
+			$("#suggest-main").hide();
+			$("#collection-main").hide();
+			$("#scroll-top").fadeOut();
+			$("#clear-btn").fadeOut();
+			var elems = document.querySelectorAll('.modal');
+		    var instances = M.Modal.init(elems, {
+		        'onOpenEnd': initCarouselModal
+		    });
+			$("#keyword").focus(function()
+			{
+				$("#search-div").addClass("black-border");
+			});
+			$("#keyword").blur(function()
+			{
+				$("#search-div").removeClass("black-border");
+			});
+			$("#search-div").click(function()
+			{
+				$("#keyword").focus();
+			});
+			$("#clear-btn").click(function(){
+				$("#keyword").val("");
+				$("#suggest-main").hide();
+				$("#search-suggest").empty();
+				$(this).fadeOut();
+			});
+			$("#search-btn").click(function(){
+				$("#search-suggest").empty();
+				$("#search-main").hide();
+				showResults($("#keyword").val());
+			});
+			$("#keyword").on('keyup',function(event){
+				if($(this).val()!="")
+				{
+					$("#clear-btn").fadeIn();
+					if(event.which==13)
+						$("#search-btn").trigger("click");
+					else
+						getSuggestion($(this).val());
+				}
+				else
+				{
+					$("#clear-btn").fadeOut();
+					$("#suggest-main").hide();
+					$("#search-suggest").empty();
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<a class="btn-floating btn-large cyan pulse top" id="scroll-top" onclick="topScreen()">
+		<i class="fa fa-arrow-up" aria-hidden="true"></i>
+	</a>
+	<div>
+		<div class="row">
+			<div class="section"></div>
+			<div class="col s12 m8 l6 xl6 offset-xl3 offset-l3 offset-m2 ">
+				<div class="search row" id="search-div">
+					<div class="col s10 m10 l10 xl10 input-field" style="border: none; margin-bottom: 0px; margin-top:10px;">
+						<input id="keyword" type="text" class="large-text" placeholder="Enter Keyword..." style="border: none; box-shadow: none; font-size: 35px;"></input>
+					</div>
+					<div class="col s2 m2 l2 xl2 search-div-buttons">
+						<a id="search-btn" class="search-button right"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>
+						<a id="clear-btn" class="clear-button"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div style="position: relative; width: 100%;">
+					<div class="row suggest-main black-text" id="suggest-main" style="position: absolute; width: 103.5%;">
+						<div class="col s10 m10 l10 xl10 offset-s1 offset-m1 offset-l1 offset-xl1" >
+							<div class="row" id="search-suggest">
+							</div>
+							<!--<ul class="" id="search-suggest">
+							</ul>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m8 l6 xl6 offset-xl3 offset-l3 offset-m2 fixed" id="progress">
+				<div id="load">
+					<div class="progress">
+				      	<div class="indeterminate"></div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="collection-main">
+			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1" id="result-info">
+
+			</div>
+			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1">
+				<div class="col center-align-div center" id="page-main-top">
+					
+				</div>
+			</div>
+			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1">
+				<div class="row" id="collection">
+				</div>
+			</div>
+			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1">
+				<div class="col center-align-div" id="page-main-bottom">
+					
+				</div>
+			</div>
+		</div>
+		<div id="modal1" class="modal">
+		    <div class="modal-content">
+			    <div class="carousel carousel-slider" id="carousel-collection">
+			    	
+				    <!-- <div class="carousel-fixed-item center">
+				      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+				    </div> -->
+				</div>
+		    </div>
+		</div>
+
+	</div>
+</body>
+</html>
+

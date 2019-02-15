@@ -1,0 +1,20 @@
+<div class='row valign-wrapper'>
+	<div class='col s2 l2 m2 xl2'>
+		<img src='assets/avatar.png' class='circle responsive-img small-image'>
+	</div>
+	<div class='col s10 m10 l10 xl10'>
+		<span class='black-text'>"+value['name']+"</span>
+	</div>
+	<div class='col s12 m12 l12 xl12'>
+		<div class='divider'>
+		</div>
+	</div>
+</div>
+
+
+
+
+$.each(data['results'],function(key,value){
+				  	//$("#result-set").append("<li>"+(key+1) +" - "+value['name']+"</li>")
+				  	$("#search-suggest").append("<div class='row valign-wrapper hoverable suggest border-bottom'><div class='col s2 l2 m2 xl2'><img src='https://image.tmdb.org/t/p/w500/"+value['profile_path']+"' class='circle responsive-img small-image'></div><div class='col s10 m10 l10 xl10'><span class='black-text'>"+value['name']+"</span></div></div>");
+				  });

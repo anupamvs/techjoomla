@@ -5,8 +5,8 @@
           	<label for="category_name">Category Name</label>
         </div>
         <div class="input-field col s12">
-          	<textarea id="category_descrption" name="category_descrption" class="materialize-textarea"></textarea>
-          	<label for="category_descrption">Category Description</label>
+          	<textarea id="category_description" name="category_description" class="materialize-textarea"></textarea>
+          	<label for="category_description">Category Description</label>
         </div>
   	</div>
 </div>

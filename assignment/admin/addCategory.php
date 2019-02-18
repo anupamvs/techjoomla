@@ -47,13 +47,6 @@
 			    $('.sidenav').sidenav();
 			    $('.collapsible').collapsible();
 			    $("#cat-add-btn").click(function(){
-			    	// show("Check 1");
-			    	// if($("#category_name").val()=="")
-			    	// {
-			    	// 	swal("Required", "Enter Category Name", "error");
-			    	// 	$("#category_name").focus();
-			    	// }
-			    	//$("#cat-form").trigger("submit");
 			    });
 			    $("form").submit(function(event)
 			    	{
@@ -61,15 +54,17 @@
 				    	{
 				    		swal("Required", "Enter Category Name", "error");
 				    		event.preventDefault();
-				    		//$("#category_name").focus();
 				    	}
-			    		// alert($("#category_name").val());
-			    		// alert($("#category_descrption").val());
-			    		// if(true)
-			    		$.ajax({'url':'test.php','dataType':'json','type':'POST','data':$('#cat-form').serialize()}).done(function(data)
-			    		{
-			    			console.log(data);
-			    		})
+			    		var cname=$("#category_name").val();
+			  			var cdesc=$("#category_description").val();
+			    		$.ajax({'url':'curdCategory.php','dataType':'json','type':'POST','data':{'category_name':cname,'category_description':cdesc,'opertaion':'add'}
+			    			}).done(function(data)
+					    		{
+					    			console.log(data);
+					    			swal(data["title"],data["message"],data["status"]);
+					    			$("#category_name").val("");
+					    			$("#category_description").val("");
+					    		});
 			    	});
 		  	});
 	  	 	function check(event)

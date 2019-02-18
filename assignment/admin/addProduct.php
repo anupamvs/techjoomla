@@ -16,10 +16,12 @@
 			    $('.collapsible').collapsible();
 			    $("#add-product").click(function()
 			  		{
-				  		$.ajax({url: "form.php", success: function(result){
-		    						$("#main-container").html(result);
-		  				}});
+			  			var cname=$("#category_name").val();
+			  			var cdesc=$("#category_descrption").val();
+				  		$.ajax({url: "form.php",type:'POST',data:{'category_name':cname,'category_descrption':cdesc}});
 		  				
+				  	}).done(function(){
+				  		$("#main-container").html(result);
 				  	});
 			    $("#view-product").click(show);
 			    $("")

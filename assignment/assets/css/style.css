@@ -40,3 +40,20 @@ margin-right-none
 {
 	margin-bottom: 0px;
 }
+.collapsible-header
+{
+	display: block;
+	padding-right: 0px;
+}
+.progress
+{
+	margin:0px;
+	z-index: 5 !important;
+	position: fixed;
+	top:0px;
+	background-color: #bbdefb;
+}
+.progress .indeterminate
+{
+	background-color: #1976d2;
+}

@@ -20,7 +20,8 @@
 			$("#clear-btn").fadeOut();
 			var elems = document.querySelectorAll('.modal');
 		    var instances = M.Modal.init(elems, {
-		        'onOpenEnd': initCarouselModal
+		        'onOpenEnd': initCarouselModal,
+		        'preventScrolling':false
 		    });
 			$("#keyword").focus(function()
 			{
@@ -72,7 +73,7 @@
 		<div class="row">
 			<div class="section"></div>
 			<div class="col s12 m8 l6 xl6 offset-xl3 offset-l3 offset-m2 ">
-				<div class="search row" id="search-div">
+				<div class="search row " id="search-div">
 					<div class="col s10 m10 l10 xl10 input-field" style="border: none; margin-bottom: 0px; margin-top:10px;">
 						<input id="keyword" type="text" class="large-text" placeholder="Enter Keyword..." style="border: none; box-shadow: none; font-size: 35px;"></input>
 					</div>
@@ -101,7 +102,7 @@
 			</div>
 		</div>
 		<div class="row" id="collection-main">
-			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1" id="result-info">
+			<div class="col s12 m12 l10 xl10  offset-l1 offset-xl1" id="result-info">
 
 			</div>
 			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1">
@@ -109,7 +110,7 @@
 					
 				</div>
 			</div>
-			<div class="col s12 m12 l10 xl10 offset-l1 offset-xl1">
+			<div class="col s10 m10 l10 xl10 offset-s1 offset-m1 offset-l1 offset-xl1">
 				<div class="row" id="collection">
 				</div>
 			</div>
@@ -122,10 +123,6 @@
 		<div id="modal1" class="modal">
 		    <div class="modal-content">
 			    <div class="carousel carousel-slider" id="carousel-collection">
-			    	
-				    <!-- <div class="carousel-fixed-item center">
-				      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-				    </div> -->
 				</div>
 		    </div>
 		</div>

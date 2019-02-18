@@ -46,7 +46,7 @@
         	<div class="collapsible-body">
               <ul>
                 <li id="cat-add"><a href="addCategory.php">Add</a></li>
-                <li id="cat-update"><a href="viewCategory.php">View</a></li>
+                <li id="cat-view"><a href="viewCategory.php">View</a></li>
               </ul>
         	</div>
       	</li>

@@ -51,9 +51,88 @@ margin-right-none
 	z-index: 5 !important;
 	position: fixed;
 	top:0px;
-	background-color: #bbdefb;
+	background-color: white;
 }
 .progress .indeterminate
 {
 	background-color: #1976d2;
+}
+.collapsible-header i:hover
+{
+	transition-delay: .1s;
+	color:gray !important;
+}
+.select-wrapper ul li
+{
+	color: black !important;
+}
+input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected 
+{
+	background-color: white !important;
+}
+.max-width-100-percent
+{
+	max-width: 100%;
+}
+.card-action a
+{
+	cursor: pointer;
+}
+.capitalize
+{
+	text-transform: capitalize;
+}
+.login
+{
+	
+	max-width: 40%;
+	margin:10% auto 0px auto;
+	border-radius: 10px;
+	position: relative;
+}
+@media screen and (max-width: 992px) 
+{
+	.login
+	{
+		max-width:60%;
+	}
+}
+@media screen and (max-width: 600px) 
+{
+	.login
+	{
+		max-width:80%;
+	}
+}
+.absolute
+{
+	position: absolute;
+}
+.padding-25
+{
+	padding: 25px;
+}
+.rounded-border-top
+{
+	border-radius: 15px 15px 0px 0px;
+}
+@media only screen and (max-width: 992px)
+.sidenav.sidenav-fixed {
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+}
+.menu
+{
+	position: fixed;
+	top:1em;
+	left: 1em;
+}
+.sidenav .collapsible-body>ul:not(.collapsible)>li.active, .sidenav.sidenav-fixed .collapsible-body>ul:not(.collapsible)>li.active
+{
+	background-color: #64b5f6;
+}
+.large-text
+{
+	font-size: 4em;
+	font-weight: bold;
 }

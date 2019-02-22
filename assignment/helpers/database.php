@@ -37,8 +37,19 @@
 		function select($sql)
 		{
 			$result=$this->con->query($sql);
-			if($result->num_rows>0)
+			//if($result->num_rows>0)
 				return ($result->fetch_assoc());
+		}
+		function delete($sql)
+		{
+			if($this->con->query($sql))
+				return true;
+			else
+				return false;
+		}
+		function getCount($sql)
+		{
+			
 		}
 	}
 ?>

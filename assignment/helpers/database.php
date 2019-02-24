@@ -3,7 +3,7 @@
 	{
 		protected $dns="localhost";
 		protected $user="root";
-		protected $pass="root";
+		protected $pass="";
 		protected $database="anupam_ecom";
 		protected $con;
 		function __construct()

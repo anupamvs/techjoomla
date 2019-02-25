@@ -137,3 +137,17 @@ input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:
 	font-size: 4em;
 	font-weight: bold;
 }
+.search-box
+{
+	border:none !important; 
+	box-shadow: none !important; 
+	background: inherit !important;
+}
+.product-card-image
+{
+	max-height: 340px;
+}
+.thumbnail
+{
+	max-height: 150px;
+}

@@ -14,7 +14,8 @@
 			$loc="../assets/uploads/".time().uniqid(rand()).basename($_FILES["product_image"]["name"]);
 			if(move_uploaded_file($_FILES["product_image"]["tmp_name"], $loc))
 			{
-				$sql="INSERT INTO `product`(`pro_name`, `pro_image`, `pro_cat`, `pro_desc`, `pro_price`) VALUES ('".$_POST['product_name']."','".$loc."',".$_POST['product_category'].",'".$_POST['product_description']."',".$_POST["product_price"].")";
+				$date = date('YYYY-MM-DD HH:MI:SS');
+				$sql="INSERT INTO `product`(`pro_name`, `pro_image`, `pro_cat`, `pro_desc`, `pro_price`, `added_by`) VALUES ('".$_POST['product_name']."','".$loc."',".$_POST['product_category'].",'".$_POST['product_description']."',".$_POST["product_price"].",".$_SESSION["user_id"].")";
 				if($this->db->query($sql))
 					echo json_encode(["status"=>"success","message"=>"Product Added","title"=>"Success"]);
 				else

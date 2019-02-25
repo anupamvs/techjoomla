@@ -12,7 +12,7 @@
 		}
 		public function addCategory($catName,$catDesc)
 		{
-			$sql="INSERT INTO `category`( `cat_name`, `cat_desc`) VALUES ('".$catName."','".$catDesc."')";
+			$sql="INSERT INTO `category`( `cat_name`, `cat_desc`, `created_by`) VALUES ('".$catName."','".$catDesc."',".$_SESSION["user_id"].")";
 			if($this->db->query($sql))
 				echo json_encode(["status"=>"success","message"=>"Category Added","title"=>"Success"]);
 			else

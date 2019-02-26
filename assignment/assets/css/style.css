@@ -145,9 +145,39 @@ input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:
 }
 .product-card-image
 {
-	max-height: 340px;
+	max-height: 100%;
+	max-width: 100%;
 }
 .thumbnail
 {
 	max-height: 150px;
+}
+.image-div-thumb
+{
+	height: 340px;
+}
+.hover-red:hover
+{
+	color: red;
+	cursor: pointer;
+}
+.cart-img
+{
+	max-width: 100%;
+}
+.layer
+{
+	background-color: rgba(0,0,0,.5);
+}
+a
+{
+	cursor: pointer !important;
+}
+.pagination li.active
+{
+	background-color: #1976d2;
+}
+.menu-bar-top
+{
+	z-index: 4;
 }

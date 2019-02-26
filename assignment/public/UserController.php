@@ -81,6 +81,14 @@
 			unset($result);
 			echo json_encode($data);
 		}
+		public function deleteCart($post)
+		{
+			$sql="DELETE FROM `cart` WHERE id=".$post["c"]." AND c_id=".$_SESSION["user_id"];
+			if($this->db->query($sql))
+				echo json_encode(["status"=>"success","message"=>"Product Deleted From Cart","title"=>"Success"]);
+			else
+				echo json_encode(["status"=>"error","message"=>"Product Not Deleted From Cart","title"=>"Failed"]);
+		}
 	}
 	if(isset($_POST["operation"]))
 	{
@@ -104,6 +112,10 @@
 			case 'loadCart':
 				# code...
 				$user->loadCart();
+				break;
+			case 'deleteCart':
+				$user->deleteCart($_POST);
+				# code...
 				break;
 			default:
 				# code...

@@ -10,8 +10,8 @@
                 echo'
                     <li><a class="dropdown-trigger" data-target="user">hi ! <i class="fa fa-angle-down material-icons right" aria-hidden="true"></i></a></li>
                     <ul id="user" class="dropdown-content">
-                    <li><a href="Login.php">Login</a></li>
-                    <li><a href="Signup.php">New User</a></li>
+                    <li><a href="Login.php" class="black-text">Login<i class="material-icon right-align fa fa-sign-in" aria-hidden="true"></i></a></li>
+                    <li><a href="Signup.php" class="black-text">New User<i class="material-icon right-align fa fa-user-plus" aria-hidden="true"></i></a></li>
                     </ul>';
                     
                 }
@@ -19,9 +19,9 @@
                 {
                    echo '<li><a class="dropdown-trigger" data-target="user">hi ! '.$_SESSION["user_name"].'<i class="fa fa-angle-down material-icons right" aria-hidden="true"></i></a></li>
                     <ul id="user" class="dropdown-content">
-                    <li><a class="modal-trigger" onclick="loadCart()" href="#modal1">Cart</a></li>
+                    <li><a class="modal-trigger black-text" onclick="loadCart()" href="#modal1">Cart<i class="material-icon right-align fa fa-shopping-cart" aria-hidden="true"></i></a></li>
                     <li class="divider"></li>
-                    <li><a href="Logout.php">Logout</a></li>
+                    <li><a href="Logout.php" class="black-text">Logout  <i class="material-icon right-align fa fa-sign-out" aria-hidden="true"></i></a></li>
                     </ul>';
                 }
             ?>

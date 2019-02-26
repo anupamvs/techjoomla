@@ -40,13 +40,19 @@
     </head>
     <body>
         <?php
-	//phpinfo();
-        require_once 'navigation.php';
+            require_once 'navigation.php';
         ?>
+
         <div>
+            <div class="section"></div>
             <div class="row" id="product-collection">
             </div>
             <div class="row">
+                <div class="col s12 m12 l10 xl10 offset-l1 offset-xl1">
+                    <div class="col center-align-div center" id="page-main-top" style="float: none; margin:0px auto;">
+                    
+                    </div>
+                </div>
             </div>
         </div>
         <div id="modal1" class="modal">

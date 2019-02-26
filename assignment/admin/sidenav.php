@@ -12,7 +12,7 @@
     }
   }*/
 ?> 
-<span class="menu"><a href="#" data-target="slide-out" class="top-nav sidenav-trigger full hide-on-large-only"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></span>
+<span class="menu menu-bar-top"><a href="#" data-target="slide-out" class="top-nav sidenav-trigger full hide-on-large-only"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></span>
 <ul id="slide-out" class="sidenav sidenav-fixed " style="transform: translateX(-105%);">
 <li>
 	<div class="user-view">

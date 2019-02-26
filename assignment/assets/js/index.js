@@ -1,3 +1,4 @@
+
 function loginUser(event,formData)
 {
 	//console.log(formData);
@@ -30,5 +31,39 @@ function setCount()
 		var obj=JSON.parse(data);
 		$("#total-category").html(obj["total_category"]);
 		$("#total-product").html(obj["total_product"]);
+		$("#total-user").html(obj["total_user"]);
 	})
+}
+function setChart()
+{
+	$.ajax({'url':'DashController.php','type':'POST','data':{'operation':'chart'}})
+	.done(function(data)
+	{
+		drawChart(data);
+	});
+}
+function drawChart(e)
+{
+	var et=JSON.parse(e);
+	var ctx = document.getElementById("myChart");
+	var myChart = new Chart(ctx, {
+	    type: 'bar',
+	    data: {
+	        labels: et["labels"],
+	        datasets: [{
+	            data: et["data"],
+	            backgroundColor: et["color"],
+	            borderWidth: 1
+	        }]
+	    },
+	    options: {
+	        scales: {
+	            yAxes: [{
+	                ticks: {
+	                    beginAtZero:true
+	                }
+	            }]
+	        }
+	    }
+	});
 }

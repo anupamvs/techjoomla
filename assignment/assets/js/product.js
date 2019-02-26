@@ -21,6 +21,7 @@ function addProduct(event,formData)
 			var obj = JSON.parse(data);
 			console.log(obj);
 			swal(obj["title"],obj["message"],obj["status"]);
+			setTimeout(function(){$(location).attr('href',"addProduct.php");},1000);
 		});
 
 }
@@ -77,7 +78,7 @@ function constructProductGrid(data)
 	var temp="";
 	$.each(data["results"],function(key,value)
 		{
-			temp+='<div class="col s12 ml4 s12 m4 xl4"><div class="card-panel"><div class="card-content"><span class="card-title capitalize">'+value["pro_name"]+'</span></div><div class="divider"></div><div class="section"></div><div class="card-action"><a class="red-text" onClick="deleteProduct('+value['pro_id']+',\''+value['pro_name']+'\')">Delete</a><a class="right modal-trigger" href="#modal1" onClick="viewProduct('+value['pro_id']+')">View</a></div></div></div>';
+			temp+='<div class="col s12 ml4 s12 m4 xl4"><div class="card-panel"><div class="card-content"><span class="card-title capitalize truncate">'+value["pro_name"]+'</span></div><div class="divider"></div><div class="section"></div><div class="card-action"><a class="red-text" onClick="deleteProduct('+value['pro_id']+',\''+value['pro_name']+'\')">Delete</a><a class="right modal-trigger" href="#modal1" onClick="viewProduct('+value['pro_id']+')">View</a></div></div></div>';
 		});
 	$("#main-container").html(temp);
 }

@@ -15,7 +15,7 @@
 		public function login($post)
 		{
 			$data=array();
-			$sql="SELECT * FROM `euser` WHERE user_email='".$post["email"]."' and user_password='".$_POST["pass"]."'";
+			$sql="SELECT * FROM `euser` WHERE user_email='".$post["email"]."' and user_password='".md5($_POST["pass"])."'";
 			$result=$this->db->select($sql);
 			if($result==null)
 			{
@@ -28,12 +28,23 @@
 				$_SESSION["user_name"]=$result["user_name"];
 				$_SESSION["user_email"]=$result["user_email"];
 				$_SESSION["user_id"]=$result["user_id"];
+				//print_r($_COOKIE);
+				if(isset($_COOKIE["product"]))
+				{
+					//echo "Working";
+					$products=explode(" ",$_COOKIE["product"]);
+					foreach ($products as $k=>$v) 
+					{
+						$this->addToCartPre(["product"=>$v]);
+					}
+					setcookie("product", "", time() - 3600);
+				}
 			}
 			echo json_encode($data);
 		}
 		public function newUser($post)
 		{
-			$sql="INSERT INTO `euser`( `user_name`, `user_email`, `user_password`) VALUES ('".$post['name']."','".$post['email']."','".$post['pass']."')";
+			$sql="INSERT INTO `euser`( `user_name`, `user_email`, `user_password`) VALUES ('".$post['name']."','".$post['email']."','".md5($post['pass'])."')";
 			if($this->db->query($sql))
 				echo json_encode(["status"=>"success","message"=>"Register Succesfully","title"=>"Success"]);
 			else
@@ -57,17 +68,32 @@
 			$data = array();
 			if(!(isset($_SESSION["user_name"]) && isset($_SESSION["user_email"]) && isset($_SESSION["user_id"])))
 			{
-				$data["status"]="warning";
-				$data["message"]="Login First";
-				$data["title"]="Warning";
-				echo json_encode($data);
-				die();
+				// $data["status"]="warning";
+				// $data["message"]="Login First";
+				// $data["title"]="Warning";
+				// echo json_encode($data);
+				// die();
+				$products=array();
+				if(isset($_COOKIE["product"]))
+				{
+					$products=explode(" ",$_COOKIE["product"]);
+				}
+				$products[]=$post["product"];
+				setcookie("product",implode(" ",$products));
 			}
-			$sql="INSERT INTO `cart`(`p_id`, `c_id`) VALUES (".$post["product"].",".$_SESSION["user_id"].")";
-			if($this->db->query($sql))
-				echo json_encode(["status"=>"success","message"=>"Product Added To Cart","title"=>"Success"]);
 			else
-				echo json_encode(["status"=>"error","message"=>"Failed To Add","title"=>"Failed"]);
+			{
+				$sql="INSERT INTO `cart`(`p_id`, `c_id`) VALUES (".$post["product"].",".$_SESSION["user_id"].")";
+				if($this->db->query($sql))
+					echo json_encode(["status"=>"success","message"=>"Product Added To Cart","title"=>"Success"]);
+				else
+					echo json_encode(["status"=>"error","message"=>"Failed To Add","title"=>"Failed"]);
+			}
+		}
+		public function addToCartPre($post)
+		{
+			$sql="INSERT INTO `cart`(`p_id`, `c_id`) VALUES (".$post["product"].",".$_SESSION["user_id"].")";
+			$this->db->query($sql);
 		}
 		public function loadCart()
 		{

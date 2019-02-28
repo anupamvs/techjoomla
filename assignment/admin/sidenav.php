@@ -1,17 +1,3 @@
- <?php
- /* if(isset($_SESSION["page"]))
-  {
-    if($_SESSION["page"]=="product")
-    {
-      echo "<script>alert('hello');</script>";
-      echo "<script>$('#pro').addClass('active')</script>";
-      if($_SESSION["option"]=="add")
-        echo "<script>$('#pro-add').addClass('active')</script>";
-      else
-        echo "<script>$('#pro-view').addClass('active')</script>";
-    }
-  }*/
-?> 
 <span class="menu menu-bar-top"><a href="#" data-target="slide-out" class="top-nav sidenav-trigger full hide-on-large-only"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></span>
 <ul id="slide-out" class="sidenav sidenav-fixed " style="transform: translateX(-105%);">
 <li>

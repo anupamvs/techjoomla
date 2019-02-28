@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_GET["search"]))
+    {
+        header("location:index.php");
+        die();
+    }
+?>
 <html>
     <head>
         <?php
@@ -9,7 +16,7 @@
             $(document).ready(function()
             {
                 setCategory();
-                getProduct();
+                searchProduct('<?php echo $_GET["search"] ?>');
                 $('.sidenav').sidenav();
                 $('.materialboxed').materialbox();
                 $('.modal').modal();

@@ -147,7 +147,9 @@ function search(event,keyword)
 	{
 		if(keyword!=null)
 		{
-			searchProduct(keyword);
+			setTimeout(function(){
+    				$(location).attr('href',"search.php?search="+keyword);
+    			},500);
 		}
 	}
 }

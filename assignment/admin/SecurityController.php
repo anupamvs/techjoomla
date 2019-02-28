@@ -15,7 +15,7 @@
 		{
 			$data=array();
 			$db=new Database();
-			$sql="SELECT * FROM `euser` WHERE user_email='".$post["email"]."' and user_password='".$_POST["pass"]."'";
+			$sql="SELECT * FROM `euser` WHERE user_email='".$post["email"]."' and user_password='".md5($_POST["pass"])."'";
 			$result=$db->select($sql);
 			if($result==null)
 			{

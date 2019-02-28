@@ -2,7 +2,7 @@
     <div class="nav-wrapper blue lighten-1">
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa fa-bars" aria-hidden="true"></i></a>
         <ul class="right hide-on-med-and-down">  
-            <li onclick="getProduct()"><a>Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a class="dropdown-trigger" data-target="category">Category <i class="fa fa-angle-down material-icons right" aria-hidden="true"></i></a></li>
             <?php
                 if(!(isset($_SESSION["user_name"])))

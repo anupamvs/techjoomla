@@ -1,0 +1,183 @@
+@media only screen and (min-width: 992px){
+    .parent-container
+	{
+		margin-left: 300px;
+	}
+}
+@media only screen and (max-width: 991px) {
+    .parent-container
+	{
+		margin-left: 0px;
+	}
+}
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
+{
+    border-bottom: 1px solid #64b5f6;
+    -webkit-box-shadow: 0 1px 0 0 #64b5f6;
+    box-shadow: 0 1px 0 0 #64b5f6;
+}
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label
+{
+	color:#64b5f6;
+}
+margin-bottom-none
+{
+	margin-bottom: 0px !important;
+}
+margin-top-none
+{
+	margin-top: 0px;
+}
+margin-left-none
+{
+	margin-left: 0px;
+}
+margin-right-none
+{
+	margin-right: 0px;
+}
+.row
+{
+	margin-bottom: 0px;
+}
+.collapsible-header
+{
+	display: block;
+	padding-right: 0px;
+}
+.progress
+{
+	margin:0px;
+	z-index: 5 !important;
+	position: fixed;
+	top:0px;
+	background-color: white;
+}
+.progress .indeterminate
+{
+	background-color: #1976d2;
+}
+.collapsible-header i:hover
+{
+	transition-delay: .1s;
+	color:gray !important;
+}
+.select-wrapper ul li
+{
+	color: black !important;
+}
+input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected 
+{
+	background-color: white !important;
+}
+.max-width-100-percent
+{
+	max-width: 100%;
+}
+.card-action a
+{
+	cursor: pointer;
+}
+.capitalize
+{
+	text-transform: capitalize;
+}
+.login
+{
+	
+	max-width: 40%;
+	margin:10% auto 0px auto;
+	border-radius: 10px;
+	position: relative;
+}
+@media screen and (max-width: 992px) 
+{
+	.login
+	{
+		max-width:60%;
+	}
+}
+@media screen and (max-width: 600px) 
+{
+	.login
+	{
+		max-width:80%;
+	}
+}
+.absolute
+{
+	position: absolute;
+}
+.padding-25
+{
+	padding: 25px;
+}
+.rounded-border-top
+{
+	border-radius: 15px 15px 0px 0px;
+}
+@media only screen and (max-width: 992px)
+{}
+.sidenav.sidenav-fixed {
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+}
+.menu
+{
+	position: fixed;
+	top:1em;
+	left: 1em;
+}
+.sidenav .collapsible-body>ul:not(.collapsible)>li.active, .sidenav.sidenav-fixed .collapsible-body>ul:not(.collapsible)>li.active
+{
+	background-color: #64b5f6;
+}
+.large-text
+{
+	font-size: 4em;
+	font-weight: bold;
+}
+.search-box
+{
+	border:none !important; 
+	box-shadow: none !important; 
+	background: inherit !important;
+}
+.product-card-image
+{
+	max-height: 100%;
+	max-width: 100%;
+}
+.thumbnail
+{
+	max-height: 150px;
+}
+.image-div-thumb
+{
+	height: 340px;
+}
+.hover-red:hover
+{
+	color: red;
+	cursor: pointer;
+}
+.cart-img
+{
+	max-width: 100%;
+}
+.layer
+{
+	background-color: rgba(0,0,0,.5);
+}
+a
+{
+	cursor: pointer !important;
+}
+.pagination li.active
+{
+	background-color: #1976d2;
+}
+.menu-bar-top
+{
+	z-index: 4;
+}

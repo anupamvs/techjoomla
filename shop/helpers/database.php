@@ -6,11 +6,18 @@
 		private $pass="root";
 		private $database="anupam_ecom";
 		private $con;
-		function __construct()
+		private static $instance;
+		private function __construct()
 		{
 			$this->con=new Mysqli($this->dns,$this->user,$this->pass,$this->database);
 			if(!$this->con)
 				return (["error"=>$this->con->connect_error]);
+		}
+		public static function getInstance()
+		{
+			if(!self::$instance)
+				self::$instance=new static();
+			return self::$instance;
 		}
 		function query($sql)
 		{
@@ -45,6 +52,18 @@
 		function getCount($sql)
 		{
 			
+		}
+	}
+	/**
+	 * 
+	 */
+	class Test
+	{
+		private $t;
+		function __construct()
+		{
+			# code...
+			$this->t="working";
 		}
 	}
 ?>

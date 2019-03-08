@@ -14,7 +14,7 @@
 		public function login($post)
 		{
 			$data=array();
-			$db=new Database();
+			$db=database::getInstance();
 			$sql="SELECT * FROM `euser` WHERE user_email='".$post["email"]."' and user_password='".md5($_POST["pass"])."'";
 			$result=$db->select($sql);
 			if($result==null)

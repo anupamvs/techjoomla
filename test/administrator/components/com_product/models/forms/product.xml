@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="edit">
+		<field 
+			name="title" 
+			type="text" 
+			label="Name" 
+			description=""  
+		/>
+		<field 
+			name="category" 
+			type="text" 
+			label="Category" 
+			description=""  
+		/>
+		<field 
+			name="description" 
+			type="textarea" 
+			label="Description" 
+			description="" 
+			rows="4" 
+			cols="25" 
+			/>
+	</fieldset>
+</form>
